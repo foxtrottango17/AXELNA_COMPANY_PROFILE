@@ -248,7 +248,25 @@ ul#demand_list li.active {
     font-weight: bold;
 }
 
+ul#distribution_list {
+    list-style: none;
+    padding: 0;
+}
 
+ul#distribution_list li {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd; /* Border color */
+}
+
+ul#distribution_list li:hover {
+    background-color: #f9f9f9; /* Hover background color */
+}
+
+ul#distribution_list li.active {
+    background-color: #e0f7fa; /* Active item background color */
+    font-weight: bold;
+}
 
 
 .text-section ul li.active {
