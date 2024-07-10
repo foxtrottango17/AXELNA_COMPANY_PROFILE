@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXELNA SOLUTIONS G.K.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="navigationBarContainer">
+            <div class="insideLeftNavigationBar">
+                <h1>AXELNA SOLUTIONS G.K.</h1>
+            </div>
+            <div class="insideRightNavigationBar">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video autoplay loop muted class="video-background" style="opacity:80%">
+            <source src="videos/v3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Optimize Your Supply Chain with Our Experts</h2>
+                <p>Comprehensive tools for sales forecasting, demand planning, production planning, and more.</p>
+                <a href="#solutions" class="cta-button">Explore Solutions</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="solutions" class="blue-yonder">
+        <div>Our Blue Yonder Solutions</div>
+    </div>
+
+   <!-- Solutions Section -->
+    <section class="solutions">
+        <div class="container" style="width:90vw">
+            <div class="slideshow-container">
+                <div class="solution-slide active" data-section="demand_planning">
+                    <div class="slide-content" style="background-image: url('images/forecast.jpg');opacity:70%">
+                        <i class="mdi mdi-chart-line fa-4x"></i>
+                        <h3>Sales Forecast & Demand Planning</h3>
+                        <p>Utilize advanced forecasting models to predict market demand accurately, enabling proactive inventory management and meeting customer expectations efficiently.</p>
+                    </div>
+                </div>
+                <div class="solution-slide" data-section="production_planning">
+                    <div class="slide-content" style="background-image: url('images/material.jpg');opacity:70%">
+                        <i class="mdi mdi-factory fa-4x"></i>
+                        <h3>Production & Material Planning</h3>
+                        <p>Optimize production schedules and ensure seamless material availability through intelligent planning strategies, enhancing operational efficiency and reducing costs.</p>
+                    </div>
+                </div>
+                <div class="solution-slide" data-section="distribution_planning">
+                    <div class="slide-content" style="background-image: url('images/distribution.jpg');opacity:70%">
+                        <i class="mdi mdi-warehouse fa-4x"></i>
+                        <h3>Inventory & Distribution Planning</h3>
+                        <p>Streamline inventory management and distribution channels to maintain optimal stock levels, minimize stockouts, and improve order fulfillment processes.</p>
+                    </div>
+                </div>
+                <!-- Navigation Arrows -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <!-- Dots Navigation -->
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <button id="demand_btn" onclick="showSection('demand_planning')">Demand Planning</button>
+        <button id="production_btn" onclick="showSection('production_planning')">Production Planning</button>
+        <button id="distribution_btn" onclick="showSection('distribution_planning')">Distribution Planning</button>
+    </div>
+    
+    <section id="planning_sections">
+        <section id="demand_planning" class="planning-section active">
+            <div style="display: flex; flex-direction: column;">
+                <div class="planning-section-header">Demand Planning</div>
+                <div style="display: flex;">
+                    <div style="width: 40%;">
+                        <div class="functionality">
+                            <h3>Functionality</h3>
+                            <p>Explore the key functionalities of our demand planning solutions:</p>
+                        </div>
+                        <ul id="demand_list">
+                            <li data-image="demand_planning/consensus_demand.jpg">Consensus Demand</li>
+                            <li data-image="demand_planning/demand_forecasting.jpg">Demand Forecasting</li>
+                            <li data-image="demand_planning/promotional_factors.jpg">Promotional / Event Factors</li>
+                            <li data-image="demand_planning/powerful_automation.jpg">Powerful Automation</li>
+                        </ul>
+                    </div>
+                    <div class="image-section">
+                        <img id="demand_image" src="demand_planning/consensus_demand.jpg" alt="Demand Planning Image">
+                    </div>
+                </div>
+                <div class="description-container">
+                    Effective demand planning is crucial for optimizing supply chain operations and meeting customer demand efficiently. By employing consensus demand forecasting and powerful automation tools, businesses can anticipate market changes and streamline operations effectively. Discover how our strategic planning methodologies enhance resilience and customer satisfaction.
+                </div>
+            </div>
+        </section>
+    
+        <section id="production_planning" class="planning-section">
+            <div style="display:flex;flex-direction:column">
+                <div class="planning-section-header">Production Planning</div>
+                <div style="display:flex;flex-direction:column">
+                    <div style="display:flex">
+                        <div style="width:40%">
+                            <div class="functionality">
+                                <h3>Functionality</h3>
+                                <p>Explore the key functionalities of our production planning solutions:</p>
+                            </div>
+                            <ul id="production_list">
+                                <li data-image="production_planning/dynamic_master_planning.jpg">Dynamic Master Planning</li>
+                                <li data-image="production_planning/root_cause_analysis.jpg">Root Cause Analysis</li>
+                                <li data-image="production_planning/create_network_resilience.jpg">Create Network Resilience</li>
+                                <li data-image="production_planning/what_if_analysis.jpg">What If Analysis</li>
+                                <li data-image="production_planning/scenario_planning.jpg">Scenario Planning</li>
+                            </ul>
+                        </div>
+                        <div class="image-section">
+                            <img id="production_image" src="production_planning/dynamic_master_planning.jpg" alt="Production Planning Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="description-container">
+                    Effective supply planning and production planning are crucial for optimizing supply chain operations and meeting customer demand efficiently. By employing standardized processes and scenario simulations, businesses can anticipate disruptions and streamline operations. Integrated approaches like Master Production Scheduling (MPS) and Material Requirements Planning (MRP) ensure timely production while minimizing costs and maximizing inventory efficiency. Discover how strategic planning methodologies enhance resilience and customer satisfaction.
+                </div>
+            </div>
+        </section>
+        
+    
+        <section id="distribution_planning" class="planning-section">
+            <div class="text-section">
+                <h2>Distribution Planning</h2>
+                <ul id="distribution_list">
+                    <li data-image="distribution_planning/dynamic_master_planning.jpg">Dynamic Master Planning</li>
+                    <li data-image="distribution_planning/root_cause_analysis.jpg">Root Cause Analysis</li>
+                    <li data-image="distribution_planning/create_network_resilience.jpg">Create Network Resilience</li>
+                    <li data-image="distribution_planning/what_if_analysis.jpg">What If Analysis</li>
+                    <li data-image="distribution_planning/scenario_planning.jpg">Scenario Planning</li>
+                </ul>
+            </div>
+            <div class="image-section">
+                <img id="distribution_image" src="distribution_planning/dynamic_master_planning.jpg" alt="Distribution Planning Image">
+            </div>
+        </section>
+    </section>
+    
+
+    <!-- Footer Section-->
+    <footer>
+        <p>&copy; 2024 AXELNA SOLUTIONS G.K. All rights reserved.</p>
+    </footer>
+  
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,524 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+header {
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the viewport */
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.navigationBarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold color for hover effect */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 65vh; /* Adjust height as needed */
+    color: white;
+    text-align: center;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: -1; /* Pushes the video behind other content */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.hero-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text for better readability */
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #3A95D0; /* Use company logo blue color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #46bddb; /* Use company logo green color for hover effect */
+}
+
+
+
+.blue-yonder {
+    background: #808080b3;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-weight: bold;
+    text-shadow: 4px 1px 10px rgb(0 0 0 / 56%);
+}
+
+/* Section Divider */
+.section-divider {
+    background: #808080b3;
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+.section-divider button {
+    background-color: #333333; /* Default button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text for better readability */
+}
+
+.section-divider button:hover {
+    background-color: #46bddb; /* Hover color */
+    transform: scale(1.05);
+}
+
+.section-divider button.active {
+    background-color: #488fbd;
+    box-shadow: 0 0 10px #488fbd;
+    font-weight: bold;
+    color: white;
+}
+
+.planning-section {
+    display: none;
+    
+}
+
+.planning-section.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem 3rem 3rem;
+    background: white;
+}
+
+.planning-section-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 2px 2px 6px rgb(0 0 0 / 35%);
+}
+
+.text-section {
+    margin-bottom: 2rem;
+}
+
+.functionality {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.functionality h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+ul#production_list {
+    list-style: none;
+    padding: 0;
+}
+
+ul#production_list li {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+ul#production_list li:hover {
+    background-color: #f9f9f9;
+}
+
+ul#production_list li.active {
+    background-color: #e0f7fa;
+    font-weight: bold;
+}
+
+/* Additional CSS for demand planning section */
+ul#demand_list {
+    list-style: none;
+    padding: 0;
+}
+
+ul#demand_list li {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+ul#demand_list li:hover {
+    background-color: #f9f9f9;
+}
+
+ul#demand_list li.active {
+    background-color: #e0f7fa;
+    font-weight: bold;
+}
+
+
+
+
+.text-section ul li.active {
+    font-weight: bold;
+    background:#3A95D0;
+    color:white;
+    padding:0.5rem;
+    width:fit-content;
+    border-radius:0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.image-section {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+/* Solutions Section */
+.solutions {
+    background-color:#8080801c;
+    color:black;
+    padding: 2.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solutions-header {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #80808070;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 4px 1px 10px rgb(0 0 0 / 56%);
+}
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.solution-slide {
+    display: none;
+    text-align: left;
+}
+
+.solution-slide.active {
+    display: block;
+}
+
+.slide-content {
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    height: 300px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add a dark text shadow */
+}
+
+.slide-content p {
+    font-size: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add a dark text shadow */
+}
+
+/* Updated CSS for navigation arrows */
+.prev, .next {
+    background-color:gray;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Add a hover effect for the arrows */
+.prev:hover, .next:hover {
+    background-color: black;
+}
+
+
+/* Dots */
+.dots-container {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #717171;
+}
+
+.big-dot {
+    height: 20px;
+    width: 20px;
+}
+
+/* Services Section */
+.services {
+    padding: 40px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.services-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.services-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.production_planning {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    height: 55vh;
+    background-color: #f9f9f9;
+}
+.text-section {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width:40%
+}
+.text-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color:white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text for better readability */
+}
+.text-section ul {
+    list-style-type: none;
+    padding: 1rem;
+}
+.text-section ul li {
+    list-style-type: none;
+    padding:0.5rem;
+    font-size: 1.2em;
+    color: black;
+    margin:0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.text-section ul li:hover {
+    list-style-type: none;
+    background-color:gray;
+    color:white;
+    width:fit-content;
+    border-radius:0.5rem;
+    padding:0.5rem;
+    width:fit-content;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+.text-section p {
+    font-size: 1em;
+    color: #666;
+    margin-top: 20px;
+}
+.text-section a {
+    text-decoration: none;
+    color: #3A95D0;
+    font-weight: bold;
+}
+.text-section a:hover {
+    text-decoration: underline;
+}
+.image-section {
+    width: 65%;
+    height:100%;
+}
+
+.image-section img {
+    height: 50vh;
+    width: -webkit-fill-available;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    word-spacing:2px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+
