@@ -133,7 +133,6 @@ nav ul li a:hover {
     text-shadow: 4px 1px 10px rgb(0 0 0 / 56%);
 }
 
-/* Section Divider */
 .section-divider {
     background: #808080b3;
     padding: 1rem;
@@ -141,7 +140,6 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    
 }
 
 .section-divider button {
@@ -170,7 +168,6 @@ nav ul li a:hover {
 
 .planning-section {
     display: none;
-    
 }
 
 .planning-section.active {
@@ -196,7 +193,7 @@ nav ul li a:hover {
 }
 
 .functionality {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     padding: 1rem;
     background-color: #f4f4f4;
     border-radius: 5px;
@@ -223,7 +220,7 @@ ul#production_list li:hover {
 }
 
 ul#production_list li.active {
-    background-color: #e0f7fa;
+    background-color: #488fbd6e;
     font-weight: bold;
 }
 
@@ -244,7 +241,7 @@ ul#demand_list li:hover {
 }
 
 ul#demand_list li.active {
-    background-color: #e0f7fa;
+    background-color: #488fbd6e;
     font-weight: bold;
 }
 
@@ -264,7 +261,7 @@ ul#distribution_list li:hover {
 }
 
 ul#distribution_list li.active {
-    background-color: #e0f7fa; /* Active item background color */
+    background-color: #488fbd6e; /* Active item background color */
     font-weight: bold;
 }
 

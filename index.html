@@ -18,7 +18,6 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#solutions">Solutions</a></li>
-                        <li><a href="#services">Services</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -43,7 +42,7 @@
     </section>
 
     <div id="solutions" class="blue-yonder">
-        <div>Our Blue Yonder Solutions</div>
+        <div>Powered By Blue Yonder</div>
     </div>
 
    <!-- Solutions Section -->
@@ -85,9 +84,9 @@
     </section>
 
     <div class="section-divider">
-        <button id="demand_btn" onclick="showSection('demand_planning')">Demand Planning</button>
-        <button id="production_btn" onclick="showSection('production_planning')">Production Planning</button>
-        <button id="distribution_btn" onclick="showSection('distribution_planning')">Distribution Planning</button>
+        <button id="demand_planning_btn" onclick="showSection('demand_planning')">Demand Planning</button>
+        <button id="production_planning_btn" onclick="showSection('production_planning')">Production Planning</button>
+        <button id="distribution_planning_btn" onclick="showSection('distribution_planning')">Distribution Planning</button>
     </div>
     
     <section id="planning_sections">
@@ -101,75 +100,76 @@
                             <p>Explore the key functionalities of our demand planning solutions:</p>
                         </div>
                         <ul id="demand_list">
-                            <li data-image="demand_planning/consensus_demand.jpg">Consensus Demand</li>
-                            <li data-image="demand_planning/demand_forecasting.jpg">Demand Forecasting</li>
-                            <li data-image="demand_planning/promotional_factors.jpg">Promotional / Event Factors</li>
-                            <li data-image="demand_planning/powerful_automation.jpg">Powerful Automation</li>
+                            <li data-image="demand_planning/consensus_demand.jpg" data-description="Achieve alignment across your organization with consensus demand planning. Integrate insights from sales, marketing, and operations to create a unified and accurate demand forecast.">Consensus Demand</li>
+                            <li data-image="demand_planning/demand_forecasting.jpg" data-description="Leverage advanced algorithms and historical data to generate precise demand forecasts. Predict customer needs with confidence and ensure optimal inventory levels.">Demand Forecasting</li>
+                            <li data-image="demand_planning/promotional_factors.jpg" data-description="Accurately factor in the impact of promotions and events on demand. Adjust forecasts to account for seasonal variations, marketing campaigns, and special events to stay ahead of the curve.">Promotional / Event Factors</li>
+                            <li data-image="demand_planning/powerful_automation.jpg" data-description="Streamline your demand planning process with powerful automation. Reduce manual intervention, minimize errors, and improve efficiency with automated data collection and analysis.">Powerful Automation</li>
                         </ul>
                     </div>
                     <div class="image-section">
                         <img id="demand_image" src="demand_planning/consensus_demand.jpg" alt="Demand Planning Image">
                     </div>
                 </div>
-                <div class="description-container">
-                    Sales forecasting and demand planning are critical for efficient supply chain management. They predict future sales and customer demand, ensuring timely product availability. By using advanced algorithms and historical data, companies achieve accurate forecasts, minimizing overproduction risks and supply chain delays. Industries rely on customer signals—orders, trends, and sales data—to anticipate demand, optimizing production and supply chain operations effectively.
+                <div id="demand_description" class="description-container">
+                    Achieve alignment across your organization with consensus demand planning. Integrate insights from sales, marketing, and operations to create a unified and accurate demand forecast.
                 </div>
             </div>
         </section>
     
         <section id="production_planning" class="planning-section">
-            <div style="display:flex;flex-direction:column">
+            <div style="display: flex; flex-direction: column;">
                 <div class="planning-section-header">Production Planning</div>
-                <div style="display:flex;flex-direction:column">
-                    <div style="display:flex">
-                        <div style="width:40%">
-                            <div class="functionality">
-                                <h3>Functionality</h3>
-                                <p>Explore the key functionalities of our production planning solutions:</p>
-                            </div>
-                            <ul id="production_list">
-                                <li data-image="production_planning/dynamic_master_planning.jpg">Dynamic Master Planning</li>
-                                <li data-image="production_planning/root_cause_analysis.jpg">Root Cause Analysis</li>
-                                <li data-image="production_planning/create_network_resilience.jpg">Create Network Resilience</li>
-                                <li data-image="production_planning/what_if_analysis.jpg">What If Analysis</li>
-                                <li data-image="production_planning/scenario_planning.jpg">Scenario Planning</li>
-                            </ul>
+                <div style="display: flex;">
+                    <div style="width: 40%;">
+                        <div class="functionality">
+                            <h3>Functionality</h3>
+                            <p>Explore the key functionalities of our production planning solutions:</p>
                         </div>
-                        <div class="image-section">
-                            <img id="production_image" src="production_planning/dynamic_master_planning.jpg" alt="Production Planning Image">
-                        </div>
+                        <ul id="production_list">
+                            <li data-image="production_planning/dynamic_master_planning.jpg" data-description="A comprehensive, real-time dashboard that provides a holistic view of your production process. Monitor key performance indicators (KPIs), track progress, and identify bottlenecks at a glance.">Production Planning Dashboard</li>
+                            <li data-image="production_planning/root_cause_analysis.jpg" data-description="Enhance customer satisfaction and order fulfillment with our Available to Promise (ATP) and Capable to Promise (CTP) functionalities. Quickly determine product availability and production capabilities to commit accurate delivery dates.">Available To Promise And Capable To Promise</li>
+                            <li data-image="production_planning/create_network_resilience.jpg" data-description="Identify and address production issues effectively with advanced root cause analysis tools. Drill down into data to uncover the origins of production delays, quality issues, and inefficiencies.">Root Cause Analysis</li>
+                            <li data-image="production_planning/what_if_analysis.jpg" data-description="Evaluate potential production changes and their impacts with powerful what-if analysis. Simulate various scenarios to make informed decisions and optimize your production strategy.">What If Analysis</li>
+                            <li data-image="production_planning/scenario_planning.jpg" data-description="Prepare for any eventuality with robust scenario planning capabilities. Develop and compare multiple production plans based on different assumptions and variables to ensure resilience and adaptability.">Scenario Planning</li>
+                        </ul>
+                    </div>
+                    <div class="image-section">
+                        <img id="production_image" src="production_planning/dynamic_master_planning.jpg" alt="Production Planning Image">
                     </div>
                 </div>
-                <div class="description-container">
-                    Effective supply planning and production planning are crucial for optimizing supply chain operations and meeting customer demand efficiently. By employing standardized processes and scenario simulations, businesses can anticipate disruptions and streamline operations. Integrated approaches like Master Production Scheduling (MPS) and Material Requirements Planning (MRP) ensure timely production while minimizing costs and maximizing inventory efficiency. Discover how strategic planning methodologies enhance resilience and customer satisfaction.
+                <div id="production_description" class="description-container">
+                    A comprehensive, real-time dashboard that provides a holistic view of your production process. Monitor key performance indicators (KPIs), track progress, and identify bottlenecks at a glance.
                 </div>
             </div>
         </section>
-        
-    
+
         <section id="distribution_planning" class="planning-section">
-            <div style="display:flex; flex-direction:column">
+            <div style="display: flex; flex-direction: column;">
                 <div class="planning-section-header">Distribution Planning</div>
-                <div style="display:flex">
-                    <div style="width:40%">
+                <div style="display: flex;">
+                    <div style="width: 40%;">
                         <div class="functionality">
                             <h3>Functionality</h3>
                             <p>Explore the key functionalities of our distribution planning solutions:</p>
                         </div>
                         <ul id="distribution_list">
-                            <li data-image="distribution_planning/build_truck_load.jpg">Build Truck Load</li>
-                            <li data-image="distribution_planning/right_inventory.jpg">Place Right Inventory At Right Location</li>
-                            <li data-image="distribution_planning/date_sensitive_inventory.jpg">Date Sensitive Inventory</li>
-                            <li data-image="distribution_planning/dynamic_deployment.jpg">Dynamic Deployment</li>
+                            <li data-image="distribution_planning/build_truck_load.jpg" data-description="Optimize your logistics with our Build Truck Load feature. Efficiently plan and consolidate shipments to maximize truck utilization, reduce transportation costs, and ensure timely deliveries.">Build Truck Load</li>
+                            <li data-image="distribution_planning/right_inventory.jpg" data-description="Enhance your distribution efficiency by strategically placing inventory at the right locations. Ensure that products are always available where they are needed most, reducing lead times and improving customer satisfaction.">Place Right Inventory At Right Location</li>
+                            <li data-image="distribution_planning/date_sensitive_inventory.jpg" data-description="Manage date-sensitive inventory with precision. Track expiration dates, manage shelf life, and prioritize the distribution of perishable goods to minimize waste and meet customer expectations.">Date Sensitive Inventory</li>
+                            <li data-image="distribution_planning/dynamic_deployment.jpg" data-description="Respond swiftly to changing demand patterns with dynamic deployment. Adapt your distribution plans in real-time to ensure optimal inventory levels across all locations, enhancing agility and responsiveness.">Dynamic Deployment</li>
                         </ul>
-                        
                     </div>
                     <div class="image-section">
-                        <img id="distribution_image" src="distribution_planning/dynamic_master_planning.jpg" alt="Distribution Planning Image">
+                        <img id="distribution_image" src="distribution_planning/build_truck_load.jpg" alt="Distribution Planning Image">
                     </div>
+                </div>
+                <div id="distribution_description" class="description-container">
+                    Optimize your logistics with our Build Truck Load feature. Efficiently plan and consolidate shipments to maximize truck utilization, reduce transportation costs, and ensure timely deliveries.
                 </div>
             </div>
         </section>
+        
+        
         
         
     </section>
