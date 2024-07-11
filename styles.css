@@ -506,7 +506,7 @@ footer {
     width: -webkit-fill-available;
     max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 1px rgb(62 60 60);
 }
 
 .description-container {
@@ -516,6 +516,9 @@ footer {
     padding: 2rem;
     word-spacing:2px;
 }
+
+
+
 
 /* Media Queries */
 @media (max-width: 768px) {
