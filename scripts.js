@@ -196,75 +196,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-    // Chart.js setup for donut charts
-    document.addEventListener('DOMContentLoaded', function () {
-        var inventoryData = {
-            labels: ['Reduced Inventory'],
-            datasets: [{
-                data: [4],
-                backgroundColor: ['#006C53'],
-                borderWidth: 0
-            }]
-        };
+    // Function to handle changing slides
+    function changeSlide(n) {
+        showSlides(slideIndex += n);
+    }
 
-        var productivityData = {
-            labels: ['Improved Productivity'],
-            datasets: [{
-                data: [40],
-                backgroundColor: ['#006C53'],
-                borderWidth: 0
-            }]
-        };
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
 
-        var accuracyData = {
-            labels: ['Increased Allocation Accuracy'],
-            datasets: [{
-                data: [20],
-                backgroundColor: ['#006C53'],
-                borderWidth: 0
-            }]
-        };
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("solution-slide");
+        let dots = document.getElementsByClassName("dot");
 
-        var ctxInventory = document.getElementById('inventoryChart').getContext('2d');
-        var inventoryChart = new Chart(ctxInventory, {
-            type: 'doughnut',
-            data: inventoryData,
-            options: {
-                cutoutPercentage: 70,
-                responsive: true,
-                maintainAspectRatio: false,
-                legend: {
-                    display: false
-                }
-            }
-        });
+        if (n > slides.length) { 
+            slideIndex = 1; 
+        }
+        if (n < 1) { 
+            slideIndex = slides.length; 
+        }
 
-        var ctxProductivity = document.getElementById('productivityChart').getContext('2d');
-        var productivityChart = new Chart(ctxProductivity, {
-            type: 'doughnut',
-            data: productivityData,
-            options: {
-                cutoutPercentage: 70,
-                responsive: true,
-                maintainAspectRatio: false,
-                legend: {
-                    display: false
-                }
-            }
-        });
+        for (i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].classList.remove("active");
+        }
 
-        var ctxAccuracy = document.getElementById('accuracyChart').getContext('2d');
-        var accuracyChart = new Chart(ctxAccuracy, {
-            type: 'doughnut',
-            data: accuracyData,
-            options: {
-                cutoutPercentage: 70,
-                responsive: true,
-                maintainAspectRatio: false,
-                legend: {
-                    display: false
-                }
-            }
-        });
+        slides[slideIndex - 1].classList.add("active");
+        dots[slideIndex - 1].classList.add("active");
+    }
+
+    // Event listeners for previous and next arrows
+    document.querySelector('.prev').addEventListener('click', function() {
+        changeSlide(-1);
     });
+
+    document.querySelector('.next').addEventListener('click', function() {
+        changeSlide(1);
+    });
+
+    // Event listeners for dot navigation
+    const dots = document.getElementsByClassName('dot');
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].addEventListener('click', function() {
+            currentSlide(i + 1);
+        });
+    }
+});

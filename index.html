@@ -49,55 +49,58 @@
     </div>
 
    <!-- Solutions Section -->
-    <section class="solutions">
-        <div class="container" style="width:90vw">
-            <div class="slideshow-container">
-                <div class="solution-slide active" data-section="demand_planning">
-                    <div class="slide-content" style="background-image: url('images/forecast.jpg');">
-                        <i class="mdi mdi-chart-line fa-4x"></i>
-                        <h3>Sales Forecast & Demand Planning</h3>
-                        <p>Utilize advanced forecasting models to predict market demand accurately, enabling proactive inventory management and meeting customer expectations efficiently.</p>
-                    </div>
+   <section class="solutions">
+    <div class="container" style="width:90vw">
+        <div class="slideshow-container">
+            <div class="solution-slide active" data-section="demand_planning">
+                <div class="slide-content" style="background-image: url('images/forecast.jpg');">
+                    <i class="mdi mdi-chart-line fa-4x"></i>
+                    <h3>Sales Forecast & Demand Planning</h3>
+                    <p>Utilize advanced forecasting models to predict market demand accurately, enabling proactive inventory management and meeting customer expectations efficiently.</p>
                 </div>
-                <div class="solution-slide" data-section="production_planning">
-                    <div class="slide-content" style="background-image: url('images/material.jpg');">
-                        <i class="mdi mdi-factory fa-4x"></i>
-                        <h3>Production & Material Planning</h3>
-                        <p>Optimize production schedules and ensure seamless material availability through intelligent planning strategies, enhancing operational efficiency and reducing costs.</p>
-                    </div>
-                </div>
-                <div class="solution-slide" data-section="distribution_planning">
-                    <div class="slide-content" style="background-image: url('images/distribution.jpg');">
-                        <i class="mdi mdi-warehouse fa-4x"></i>
-                        <h3>Inventory & Distribution Planning</h3>
-                        <p>Streamline inventory management and distribution channels to maintain optimal stock levels, minimize stockouts, and improve order fulfillment processes.</p>
-                    </div>
-                </div>
-                <!-- Navigation Arrows -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <!-- Dots Navigation -->
-            <div class="dots-container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+            <div class="solution-slide" data-section="production_planning">
+                <div class="slide-content" style="background-image: url('images/material.jpg');">
+                    <i class="mdi mdi-factory fa-4x"></i>
+                    <h3>Production & Material Planning</h3>
+                    <p>Optimize production schedules and ensure seamless material availability through intelligent planning strategies, enhancing operational efficiency and reducing costs.</p>
+                </div>
             </div>
+            <div class="solution-slide" data-section="distribution_planning">
+                <div class="slide-content" style="background-image: url('images/distribution.jpg');">
+                    <i class="mdi mdi-warehouse fa-4x"></i>
+                    <h3>Inventory & Distribution Planning</h3>
+                    <p>Streamline inventory management and distribution channels to maintain optimal stock levels, minimize stockouts, and improve order fulfillment processes.</p>
+                </div>
+            </div>
+            <!-- Navigation Arrows -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
-    </section>
+        <!-- Dots Navigation -->
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+</section>
+
+    <div class="blue-yonder">
+        <div>Powered By</div>
+    </div>
 
     <div class="section-divider">
-            <div style="display:flex;justify-content: center;align-items: center;">
-                <img style="height:3rem; margin-bottom:0.5rem" src="images/blue_yonder.png">
-            </div>
-            <div style="display: flex;justify-content: space-between;width: 90%;">
-                <button id="demand_planning_btn" onclick="showSection('demand_planning')">Demand Planning</button>
-                <button id="production_planning_btn" onclick="showSection('production_planning')">Production Planning</button>
-                <button id="distribution_planning_btn" onclick="showSection('distribution_planning')">Inventory & Distribution Planning</button>
-
-            </div>
-            
+        <div>
+            <img style="height: 2.5rem; margin-bottom: 1rem;" src="images/blue_yonder.png" alt="Blue Yonder logo">
+        </div>
+        <div class="section-buttons">
+            <button id="demand_planning_btn" onclick="showSection('demand_planning')" class="section-button">Demand Planning</button>
+            <button id="production_planning_btn" onclick="showSection('production_planning')" class="section-button">Production Planning</button>
+            <button id="distribution_planning_btn" onclick="showSection('distribution_planning')" class="section-button">Inventory & Distribution Planning</button>
+        </div>
     </div>
+    
     
     <section id="planning_sections">
         <section id="demand_planning" class="planning-section active">
@@ -111,7 +114,7 @@
                 </div>
                 -->
                 <div class="product_description">
-                    <div style="width:70%">
+                    <div style="width:80%">
                         Unlock the power of precision with Blue Yonder demand planning solutions, 
                         which is adopted and used extensively by leading manufacturers and retailers 
                         around the world. Use cutting-edge forecasting techniques to understand sales 
@@ -121,7 +124,7 @@
                 </div>
 
                 <div style="display: flex;">
-                    <div style="width: 40%;">
+                    <div style="width: 35%;padding:1rem">
                         <div class="functionality">
                             <h3>Functionality</h3>
                             <p>Explore the key functionalities of our demand planning solutions:</p>
@@ -143,7 +146,7 @@
                     </div>
                 </div>
 
-                <div class="key-benefits-container" style="background: url('images/1.jpg') no-repeat center center / cover;">
+                <div class="key-benefits-container" style="background: url('images/benefits.jpg') no-repeat center center / cover;">
                     <div style="color:white;text-shadow: 0 2px 4px rgb(31 11 11 / 90%);" class="planning-section-header">Key Benefits</div>
                     <div style="display: flex; justify-content: space-around; width: 100%; margin-top: 20px;">
                         <div style="width: 30%; text-align: center;">
@@ -164,29 +167,50 @@
                     </div>
                 </div>
 
-                <div style="margin-top: 1rem; text-align: center;">
-                    <div class="planning-section-header">Results</div>
-                    <div style="margin-top: 20px; display: flex; align-items: center; gap: 20px;">
-                        <div style="height:18vh;background: linear-gradient(135deg, #3A95D0 0%, #006C53 100%); border-radius: 8px; padding: 20px; width: 60%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); color: #fff; text-align: left;">
-                            <div style="font-size: 2.5em; font-weight: bold; margin-bottom: 10px;">30%</div>
-                            <div>
-                                <strong style="font-size: 1.2em;">Reduced Out of Stock Rate</strong><br>
-                                <p style="margin-top: 10px; font-size: 1em;">Ensure product availability and minimize stockouts, leading to satisfied customers and increased sales.</p>
+                <div style="margin-top: 2rem; text-align: center;">
+                    <div class="planning-section-header" style="color: black; font-size: 3em; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Results</div>
+                    <div style="margin-top: 30px; display: flex; justify-content: space-around; gap: 20px;">
+                        <div style="width: 30%; text-align: center;">
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(30 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">30%</text>
+                                </svg>
                             </div>
+                            <strong style="font-size: 1.5em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Reduced Out of Stock Rate</strong>
+                            <p style="margin-top: 10px; font-size: 1em;">Ensure product availability and minimize stockouts, leading to satisfied customers and increased sales.</p>
                         </div>
-                        <div style="height:18vh;background: linear-gradient(135deg, #3A95D0 0%, #006C53 100%); border-radius: 8px; padding: 20px; width: 60%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); color: #fff; text-align: left;">
-                            <div style="font-size: 2.5em; font-weight: bold; margin-bottom: 10px;">95%</div>
-                            <div>
-                                <strong style="font-size: 1.2em;">Forecast Accuracy Level</strong><br>
-                                <p style="margin-top: 10px; font-size: 1em;">Achieve high levels of precision in your demand forecasts, enabling better inventory management and efficient supply chain operations.</p>
+                        <div style="width: 30%; text-align: center;">
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(95 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">95%</text>
+                                </svg>
                             </div>
+                            <strong style="font-size: 1.5em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Forecast Accuracy Level</strong>
+                            <p style="margin-top: 10px; font-size: 1em;">Achieve high levels of precision in your demand forecasts, enabling better inventory management and efficient supply chain operations.</p>
                         </div>
-                        <div style="height:18vh;background: linear-gradient(135deg, #3A95D0 0%, #006C53 100%); border-radius: 8px; padding: 20px; width: 60%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); color: #fff; text-align: left;">
-                            <div style="font-size: 2.5em; font-weight: bold; margin-bottom: 10px;">10%</div>
-                            <div>
-                                <strong style="font-size: 1.2em;">Reduced Waste</strong><br>
-                                <p style="margin-top: 10px; font-size: 1em;">Optimize inventory levels to reduce excess stock and waste, resulting in cost savings and improved sustainability.</p>
+                        <div style="width: 30%; text-align: center;">
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(10 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">10%</text>
+                                </svg>
                             </div>
+                            <strong style="font-size: 1.5em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Reduced Waste</strong>
+                            <p style="margin-top: 10px; font-size: 1em;">Optimize inventory levels to reduce excess stock and waste, resulting in cost savings and improved sustainability.</p>
                         </div>
                     </div>
                 </div>
@@ -204,14 +228,14 @@
                 </div>
                 -->
                 <div class="product_description">
-                    <div style="width:70%">
+                    <div style="width:80%">
                         Revolutionize your manufacturing process with our comprehensive production planning solutions. 
                         Seamlessly integrate Master Production Scheduling (MPS), Material Requirements Planning (MRP), material planning, 
                         and capacity planning to elevate your operations to new heights.
                     </div>
                 </div>
                 <div style="display: flex;">
-                    <div style="width: 40%;">
+                    <div style="width: 35%;padding:1rem">
                         <div class="functionality">
                             <h3>Functionality</h3>
                             <p>Explore the key functionalities of our production planning solutions:</p>
@@ -233,7 +257,7 @@
                         A comprehensive, real-time dashboard that provides a holistic view of your production process. Monitor key performance indicators (KPIs), track progress, and identify bottlenecks at a glance.
                     </div>
                 </div>
-                <div class="key-benefits-container" style="background: url('images/6.jpg') no-repeat center center / cover;">
+                <div class="key-benefits-container" style="background: url('images/benefits.jpg') no-repeat center center / cover;">
                     <div class="planning-section-header" style="color:white;text-shadow: 0 2px 4px rgb(31 11 11 / 90%);">Key Benefits</div>
                     <div style="display: flex; justify-content: space-around; width: 100%; margin-top: 20px;">
                         <div style="width: 30%; text-align: center;">
@@ -255,20 +279,20 @@
                 </div>
         
                 <div style="margin-top: 2rem; text-align: center;">
-                    <div class="planning-section-header" style="color: #3A95D0; font-size: 2em; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Results</div>
+                    <div class="planning-section-header" style="color: black; font-size: 3em; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Results</div>
                     <div style="margin-top: 30px; display: flex; justify-content: space-around; gap: 20px;">
                         <div style="width: 30%; text-align: center;">
                             <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
                                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
                                     <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
-                                        stroke-dasharray="calc(4 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                        stroke-dasharray="calc(25 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
                                             transition: stroke-dasharray 0.3s ease-in-out;"></path>
                                     <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
-                                        font-weight="bold" fill="#3A95D0" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">4%</text>
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">25%</text>
                                 </svg>
                             </div>
-                            <strong style="font-size: 1.5em; color: #3A95D0; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Reduced Inventory</strong>
+                            <strong style="font-size: 1.5em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Reduced Inventory</strong>
                             <p style="margin-top: 10px; font-size: 1em;">Optimize inventory levels, reducing excess stock and improving efficiency.</p>
                         </div>
                         <div style="width: 30%; text-align: center;">
@@ -276,13 +300,13 @@
                                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
                                     <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
-                                        stroke-dasharray="calc(40 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                        stroke-dasharray="calc(60 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
                                             transition: stroke-dasharray 0.3s ease-in-out;"></path>
                                     <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
-                                        font-weight="bold" fill="#3A95D0" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">40%</text>
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">60%</text>
                                 </svg>
                             </div>
-                            <strong style="font-size: 1.5em; color: #3A95D0; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Improved Productivity</strong>
+                            <strong style="font-size: 1.5em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Improved Productivity</strong>
                             <p style="margin-top: 10px; font-size: 1em;">Enhance productivity with streamlined production processes.</p>
                         </div>
                         <div style="width: 30%; text-align: center;">
@@ -290,34 +314,17 @@
                                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
                                     <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
-                                        stroke-dasharray="calc(20 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                        stroke-dasharray="calc(30 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
                                             transition: stroke-dasharray 0.3s ease-in-out;"></path>
                                     <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
-                                        font-weight="bold" fill="#3A95D0" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">20%</text>
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">30%</text>
                                 </svg>
                             </div>
-                            <strong style="font-size: 1.5em; color: #3A95D0; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Reduced Expenses</strong>
+                            <strong style="font-size: 1.5em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Reduced Expenses</strong>
                             <p style="margin-top: 10px; font-size: 1em;">Reduce operational costs and improve financial performance.</p>
                         </div>
                     </div>
                 </div>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-
             </div>
         </section>
 
@@ -332,14 +339,14 @@
                 </div>
                 -->
                 <div class="product_description">
-                    <div style="width:70%">
+                    <div style="width:80%">
                         Take control of your supply chain with our state-of-the-art inventory and distribution planning solutions. 
                         Ensure your products reach the point-of-sales efficiently, every time. With our system, 
                         the right product is always in the right place at the right time.
                     </div>
                 </div>
                 <div style="display: flex;">
-                    <div style="width: 40%;">
+                    <div style="width: 35%;padding:1rem">
                         <div class="functionality">
                             <h3>Functionality</h3>
                             <p>Explore the key functionalities of our distribution planning solutions:</p>
@@ -361,7 +368,7 @@
                     </div>
                 </div>
 
-                <div class="key-benefits-container" style="background: url('images/5.jpg') no-repeat center center / cover;">
+                <div class="key-benefits-container" style="background: url('images/benefits.jpg') no-repeat center center / cover;">
                     <div style="color: white;text-shadow: 0 2px 4px rgb(31 11 11 / 90%);" class="planning-section-header">Key Benefits</div>
                     <div style="display: flex; justify-content: space-around; width: 100%; margin-top: 20px;">
                         <div style="width: 30%; text-align: center;">
@@ -383,40 +390,54 @@
                 </div>
 
                 <div style="margin-top: 1rem; text-align: center;">
-                    <div class="planning-section-header">Results</div>
+                    <div class="planning-section-header" style="color: black; font-size: 3em; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Results</div>
                     <div style="margin-top: 20px; display: flex; justify-content: space-around; gap: 20px;">
                         <div style="width: 30%; text-align: center;">
-                            <div style="position: relative; background: #3A95D0; border-radius: 8px; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); color: #fff; text-align: center;">
-                                <div style="font-size: 2.5em; font-weight: bold; margin-bottom: 10px;">4%</div>
-                                <strong style="font-size: 1.2em;">Reduced Inventory</strong>
-                                <p style="margin-top: 10px; font-size: 1em;">Optimize inventory levels, reducing excess stock and improving efficiency.</p>
-                                <div style="position: relative; width: 100%; height: 120px;">
-                                    <canvas id="inventoryChart" width="120" height="120"></canvas>
-                                </div>
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(4 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">4%</text>
+                                </svg>
                             </div>
+                            <strong style="font-size: 1.2em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Reduced Inventory</strong>
+                            <p style="margin-top: 10px; font-size: 1em; color: black;">Optimize inventory levels, reducing excess stock and improving efficiency.</p>
                         </div>
                         <div style="width: 30%; text-align: center;">
-                            <div style="position: relative; background: #3A95D0; border-radius: 8px; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); color: #fff; text-align: center;">
-                                <div style="font-size: 2.5em; font-weight: bold; margin-bottom: 10px;">40%</div>
-                                <strong style="font-size: 1.2em;">Improved Productivity</strong>
-                                <p style="margin-top: 10px; font-size: 1em;">Enhance productivity with streamlined production processes.</p>
-                                <div style="position: relative; width: 100%; height: 120px;">
-                                    <canvas id="productivityChart" width="120" height="120"></canvas>
-                                </div>
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(40 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">40%</text>
+                                </svg>
                             </div>
+                            <strong style="font-size: 1.2em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Improved Productivity</strong>
+                            <p style="margin-top: 10px; font-size: 1em; color: black;">Enhance productivity with streamlined production processes.</p>
                         </div>
                         <div style="width: 30%; text-align: center;">
-                            <div style="position: relative; background: #3A95D0; border-radius: 8px; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); color: #fff; text-align: center;">
-                                <div style="font-size: 2.5em; font-weight: bold; margin-bottom: 10px;">20%</div>
-                                <strong style="font-size: 1.2em;">Increased Allocation Accuracy</strong>
-                                <p style="margin-top: 10px; font-size: 1em;">Achieve precise allocation accuracy to optimize resource utilization.</p>
-                                <div style="position: relative; width: 100%; height: 120px;">
-                                    <canvas id="accuracyChart" width="120" height="120"></canvas>
-                                </div>
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(20 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">20%</text>
+                                </svg>
                             </div>
+                            <strong style="font-size: 1.2em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Increased Allocation Accuracy</strong>
+                            <p style="margin-top: 10px; font-size: 1em; color: black;">Achieve precise allocation accuracy to optimize resource utilization.</p>
                         </div>
                     </div>
                 </div>
+                
+                
                 
 
             </div>

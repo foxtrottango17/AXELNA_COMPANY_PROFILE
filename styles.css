@@ -142,46 +142,49 @@ nav ul li a:hover {
 
 
 .section-divider {
-    background: linear-gradient(281deg, #40404014, #80808029);
+    background-color: #efefef;
     padding: 1rem;
-    font-size: 1rem;
+    text-align: center;
+}
+
+.section-buttons {
     display: flex;
-    flex-direction:column;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 1rem;
-    align-items: center;
-    color: white;
-    padding-top: 2rem;
-    border-top: 1rem solid #787878;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-
-
-
-
-.section-divider button {
-    background: linear-gradient(135deg, #404040, #808080);
-    color: white;
+.section-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.5rem;
+    background-color: #3A95D0;
+    color: #fff;
     cursor: pointer;
-    width: 30%;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text for better readability */
+    outline: none;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.section-divider button:hover {
-    background: linear-gradient(135deg, #3A95D0 0%, #006C53 100%);
-    transform: scale(1.05);
+.section-button:hover,
+.section-button:focus {
+    background-color: #005580;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.section-divider button.active {
-    background: linear-gradient(135deg, #3A95D0 0%, #006C53 100%);
-    box-shadow: 0 0 10px #488fbd;
-    font-weight: bold;
-    color: white;
+@media (max-width: 600px) {
+    .section-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-button {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 .planning-section {
@@ -193,7 +196,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     padding: 1rem 3rem 3rem 3rem;
-    background: linear-gradient(281deg, #40404014, #80808029);
+    background: #efefef;
 }
 
 .planning-section-header{
@@ -240,8 +243,9 @@ ul#production_list li:hover {
 }
 
 ul#production_list li.active {
-    background-color: #488fbd6e;
+    background-color: #3a95d0;
     font-weight: bold;
+    color: white;
 }
 
 /* Additional CSS for demand planning section */
@@ -261,8 +265,9 @@ ul#demand_list li:hover {
 }
 
 ul#demand_list li.active {
-    background-color: #488fbd6e;
+    background-color: #3a95d0;
     font-weight: bold;
+    color: white;
 }
 
 ul#distribution_list {
@@ -281,8 +286,9 @@ ul#distribution_list li:hover {
 }
 
 ul#distribution_list li.active {
-    background-color: #488fbd6e; /* Active item background color */
+    background-color: #3a95d0;
     font-weight: bold;
+    color: white;
 }
 
 
@@ -300,7 +306,7 @@ ul#distribution_list li.active {
 .image-section {
     float: left;
     width: 50%;
-    padding: 10px;
+    padding: 2rem;
 }
 
 ul {
@@ -539,9 +545,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
     word-spacing: 2px;
-    width: 60%;
+    width: 60vw;
     font-style: italic;
 }
 
@@ -670,7 +675,6 @@ footer {
     display: flex;
     width: 100%;
     font-weight: bold;
-    padding: 1.5rem;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
