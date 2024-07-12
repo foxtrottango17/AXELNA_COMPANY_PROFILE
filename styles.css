@@ -567,7 +567,6 @@ footer {
 
 .about-us {
     position: relative; /* Ensure the relative position for absolute positioning of background */
-    padding: 2rem
 }
 
 .background-image {
@@ -592,11 +591,13 @@ footer {
     overflow: hidden;
     justify-content: center;
     align-items: center;
+
+    
 }
 
 .about-text {
     flex: 2;
-    padding: 20px;
+    padding: 3rem;
 }
 
 .founder-info {
@@ -620,57 +621,80 @@ footer {
 }
 
 
-/* Contact Us Section */
 .contact-us {
-    background-color: #3A95D0;
-    padding: 50px 20px;
+    background-image: url('images/bangkok.jpg'); /* Replace 'img/background.jpg' with your actual image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
-    color: white;
 }
 
-.contact-us h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.contact-info {
+    flex: 1;
+    padding-right: 20px;
 }
 
-.contact-us p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
     line-height: 1.6;
 }
 
 .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
+    flex: 1;
 }
 
-.contact-form label {
-    font-size: 1rem;
-    margin-bottom: 10px;
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
     display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.contact-form input, .contact-form textarea {
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
 }
 
-.contact-form input[type="submit"] {
-    background-color: #006C53;
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
     color: white;
+    padding: 12px 20px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
-.contact-form input[type="submit"]:hover {
-    background-color: #004d3a;
+button[type="submit"]:hover {
+    background-color: #45a049;
 }
+
+
 
 .product_description{
     display: flex;
