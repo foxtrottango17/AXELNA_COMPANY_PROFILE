@@ -195,3 +195,76 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
+
+    // Chart.js setup for donut charts
+    document.addEventListener('DOMContentLoaded', function () {
+        var inventoryData = {
+            labels: ['Reduced Inventory'],
+            datasets: [{
+                data: [4],
+                backgroundColor: ['#006C53'],
+                borderWidth: 0
+            }]
+        };
+
+        var productivityData = {
+            labels: ['Improved Productivity'],
+            datasets: [{
+                data: [40],
+                backgroundColor: ['#006C53'],
+                borderWidth: 0
+            }]
+        };
+
+        var accuracyData = {
+            labels: ['Increased Allocation Accuracy'],
+            datasets: [{
+                data: [20],
+                backgroundColor: ['#006C53'],
+                borderWidth: 0
+            }]
+        };
+
+        var ctxInventory = document.getElementById('inventoryChart').getContext('2d');
+        var inventoryChart = new Chart(ctxInventory, {
+            type: 'doughnut',
+            data: inventoryData,
+            options: {
+                cutoutPercentage: 70,
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                }
+            }
+        });
+
+        var ctxProductivity = document.getElementById('productivityChart').getContext('2d');
+        var productivityChart = new Chart(ctxProductivity, {
+            type: 'doughnut',
+            data: productivityData,
+            options: {
+                cutoutPercentage: 70,
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                }
+            }
+        });
+
+        var ctxAccuracy = document.getElementById('accuracyChart').getContext('2d');
+        var accuracyChart = new Chart(ctxAccuracy, {
+            type: 'doughnut',
+            data: accuracyData,
+            options: {
+                cutoutPercentage: 70,
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                }
+            }
+        });
+    });
