@@ -200,15 +200,17 @@ document.addEventListener('DOMContentLoaded', function() {
     let slideIndex = 1;
     showSlides(slideIndex);
 
-    // Function to handle changing slides
+    // Function to change slide based on index
     function changeSlide(n) {
         showSlides(slideIndex += n);
     }
 
+    // Function to set current slide based on index
     function currentSlide(n) {
         showSlides(slideIndex = n);
     }
 
+    // Function to display the current slide and update dots
     function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("solution-slide");
@@ -248,4 +250,27 @@ document.addEventListener('DOMContentLoaded', function() {
             currentSlide(i + 1);
         });
     }
+
+    // Ensure the first slide and dot are active on initial load
+    slides[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].classList.add("active");
 });
+
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Send email using EmailJS
+    emailjs.sendForm('service_irqa36r', 'test_axelna', this)
+        .then(function(response) {
+            console.log('Email sent successfully', response.status, response.text);
+            alert('Your message has been sent successfully!');
+            // Optionally clear the form
+            document.getElementById('contact-form').reset();
+        }, function(error) {
+            console.log('Email sending failed', error);
+            alert('Oops... Something went wrong. Please try again later.');
+        });
+});
+
+
