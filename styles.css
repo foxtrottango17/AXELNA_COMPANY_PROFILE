@@ -831,17 +831,6 @@ button[type="submit"]:hover {
     margin-right:1rem;
 }
 
-.disabled {
-    background-color: #ccc;
-    color: #666;
-    cursor: not-allowed;
-}
-button:not(.disabled) {
-    background-color: #28a745;
-    color: white;
-    cursor: pointer;
-}
-
 
 /* Media Queries */
 @media (max-width: 768px) {
