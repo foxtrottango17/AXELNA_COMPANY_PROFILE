@@ -226,6 +226,10 @@ nav ul li a:hover {
     width: 30%; text-align: center;
 }
 
+.results-container{
+    margin-top: 2rem; text-align: center;
+}
+
 .results-header{
     display: flex;
     justify-content: center;
@@ -235,7 +239,6 @@ nav ul li a:hover {
     padding: 0.5rem;
     font-weight: bold;
     font-size: 3rem;
-    color: white;
     text-shadow: 0 2px 4px rgb(31 11 11 / 90%);
 }
 
