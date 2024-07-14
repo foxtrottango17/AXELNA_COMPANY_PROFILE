@@ -262,6 +262,7 @@ ul#production_list li.active {
     background-color: #3a95d0;
     font-weight: bold;
     color: white;
+    border-radius:0.5rem;
 }
 
 /* Additional CSS for demand planning section */
@@ -284,6 +285,7 @@ ul#demand_list li.active {
     background-color: #3a95d0;
     font-weight: bold;
     color: white;
+    border-radius:0.5rem;
 }
 
 ul#distribution_list {
@@ -305,6 +307,7 @@ ul#distribution_list li.active {
     background-color: #3a95d0;
     font-weight: bold;
     color: white;
+    border-radius:0.5rem;
 }
 
 
