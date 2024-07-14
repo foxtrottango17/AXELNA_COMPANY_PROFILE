@@ -274,3 +274,44 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 });
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("downloadDemandPlanning1").addEventListener("click", function() {
+        window.open("pdf/01_Demand_Cognitive_Demand_Planning.pdf", "_blank");
+    });
+
+    document.getElementById("downloadDemandPlanning2").addEventListener("click", function() {
+        window.open("pdf/02_Demand_360_Luminate_Planning.pdf", "_blank");
+    });
+
+    document.getElementById("downloadDemandPlanning3").addEventListener("click", function() {
+        window.open("pdf/03_Demand_Forecasting_Solution Sheet_Luminate Planning.pdf", "_blank");
+    });
+
+    document.getElementById("downloadProductionPlanning1").addEventListener("click", function() {
+        window.open("pdf/04_Production_Planning_Replenishment_for_Manufacturing.pdf", "_blank");
+    });
+
+    document.getElementById("downloadProductionPlanning2").addEventListener("click", function() {
+        window.open("pdf/05_Intergrated_Demand_and_Supply_Planning.pdf", "_blank");
+    });
+
+    document.getElementById("downloadProductionPlanning3").addEventListener("click", function() {
+        window.open("pdf/06_Production_Planning_Solution_Sheet.pdf", "_blank");
+    });
+
+    document.getElementById("downloadDistributionPlanning1").addEventListener("click", function() {
+        window.open("pdf/07_Inventory_and_Distribution_Planning_Allocation_and_Replenishment_Hardlines_SS.pdf", "_blank");
+    });
+
+    document.getElementById("downloadDistributionPlanning2").addEventListener("click", function() {
+        window.open("pdf/08_Inventory_and_Distribution_Planning_Demand_and_Fulfill_Super_Retail_Group_Case_Study.pdf", "_blank");
+    });
+
+    document.getElementById("downloadDistributionPlanning3").addEventListener("click", function() {
+        window.open("pdf/09_Inventory_and_Distribution_Planning_Accelerate_ROI_by_Reducing_Inventory_by_Up_to_10_with_Blue.pdf", "_blank");
+    });
+});
+
+
+
+

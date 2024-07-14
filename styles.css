@@ -175,17 +175,6 @@ nav ul li a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 600px) {
-    .section-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .section-button {
-        width: 100%;
-        max-width: 300px;
-    }
-}
 
 .planning-section {
     display: none;
@@ -208,6 +197,33 @@ nav ul li a:hover {
     padding: 0.5rem;
     font-weight: bold;
     font-size: 3rem;
+    color: white;
+    text-shadow: 0 2px 4px rgb(31 11 11 / 90%);
+}
+
+.key-benefits-header{
+    display: flex;
+    justify-content: center;
+    color: #00b7f1;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 2px 4px rgb(31 11 11 / 90%);
+}
+
+.key-benefits-img{
+    width: 85px; height: 85px;
+}
+
+.key-benefits-descr-container{
+    display: flex; justify-content: space-around; width: 100%; margin-top: 20px;
+}
+
+.key-benefits-descr{
+    width: 30%; text-align: center;
 }
 
 
@@ -728,6 +744,41 @@ button[type="submit"]:hover {
     filter: saturate(330%); /* Adjust saturation value (percentage) */
 }
 
+.downloadInfo{
+    font-weight: bold;
+    padding: .5rem;
+    color: black;
+}
+
+.downloadPdfButtonsContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.downloadContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #dfdfdf;
+    margin-top: 2rem;
+    border-radius: 0.2rem;
+}
+
+.downloadButton{
+    width: 100%;
+    background: orange;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    height: 2rem;
+    border: 0px;
+    margin: 0.5rem;
+}
+
 
 
 /* Media Queries */
@@ -746,6 +797,19 @@ button[type="submit"]:hover {
 
     nav ul li a {
         font-size: 14px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .section-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-button {
+        width: 100%;
+        max-width: 300px;
     }
 }
 
