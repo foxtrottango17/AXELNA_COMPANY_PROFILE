@@ -516,35 +516,93 @@
             </div>
             <div class="contact-form">
                 <form id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="from_name" required>
+                    <div style="display:flex; align-items: center; justify-content: space-between;">
+                        <div class="form-group-name-left">
+                            <label for="first_name">First Name</label>
+                            <input type="text" id="first_name" name="from_first_name" required>
+                        </div>
+                        <div class="form-group-name-right">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" id="last_name" name="from_last_name" required>
+                        </div>
                     </div>
+                    
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="reply_to" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone_number" required>
+                        <div style="display: flex;">
+                            <select class="country-dropdown" id="country_code" name="country_code" required>
+                                <option value="+93">Afghanistan (+93)</option>
+                                <option value="+973">Bahrain (+973)</option>
+                                <option value="+880">Bangladesh (+880)</option>
+                                <option value="+855">Cambodia (+855)</option>
+                                <option value="+86">China (+86)</option>
+                                <option value="+852">Hong Kong (+852)</option>
+                                <option value="+91">India (+91)</option>
+                                <option value="+62" selected>Indonesia (+62)</option> <!-- Default selected option -->
+                                <option value="+98">Iran (+98)</option>
+                                <option value="+964">Iraq (+964)</option>
+                                <option value="+972">Israel (+972)</option>
+                                <option value="+81">Japan (+81)</option>
+                                <option value="+962">Jordan (+962)</option>
+                                <option value="+7">Kazakhstan (+7)</option>
+                                <option value="+965">Kuwait (+965)</option>
+                                <option value="+996">Kyrgyzstan (+996)</option>
+                                <option value="+856">Laos (+856)</option>
+                                <option value="+961">Lebanon (+961)</option>
+                                <option value="+853">Macau (+853)</option>
+                                <option value="+60">Malaysia (+60)</option>
+                                <option value="+960">Maldives (+960)</option>
+                                <option value="+976">Mongolia (+976)</option>
+                                <option value="+95">Myanmar (Burma) (+95)</option>
+                                <option value="+977">Nepal (+977)</option>
+                                <option value="+968">Oman (+968)</option>
+                                <option value="+92">Pakistan (+92)</option>
+                                <option value="+970">Palestine (+970)</option>
+                                <option value="+63">Philippines (+63)</option>
+                                <option value="+974">Qatar (+974)</option>
+                                <option value="+7">Russia (+7)</option>
+                                <option value="+966">Saudi Arabia (+966)</option>
+                                <option value="+65">Singapore (+65)</option>
+                                <option value="+82">South Korea (+82)</option>
+                                <option value="+94">Sri Lanka (+94)</option>
+                                <option value="+963">Syria (+963)</option>
+                                <option value="+886">Taiwan (+886)</option>
+                                <option value="+992">Tajikistan (+992)</option>
+                                <option value="+66">Thailand (+66)</option>
+                                <option value="+90">Turkey (+90)</option>
+                                <option value="+993">Turkmenistan (+993)</option>
+                                <option value="+971">United Arab Emirates (+971)</option>
+                                <option value="+998">Uzbekistan (+998)</option>
+                                <option value="+84">Vietnam (+84)</option>
+                                <option value="+967">Yemen (+967)</option>
+                            </select>
+                            <input type="tel" id="phone_number" name="phone_number" required>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="company">Company</label>
                         <input type="text" id="company" name="company_name" required>
                     </div>
                     <div class="form-group">
+                        <label for="interest">Area of Interest</label>
+                        <input type="text" id="interest" name="area_of_interest" required>
+                    </div>
+                    <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
                     <div class="form-group">
-                        <button type="submit">Send Message</button>
+                        <button type="submit" id="submit-button" class="disabled" disabled>Send Message</button>
                     </div>
                 </form>
-                
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -554,6 +612,12 @@
 
     <script src="scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("-ee5u1f2GBiE18fMc");
+        })();
+    </script>
     
 </body>
 </html>

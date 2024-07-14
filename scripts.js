@@ -256,22 +256,57 @@ document.addEventListener('DOMContentLoaded', function() {
     dots[slideIndex - 1].classList.add("active");
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    const submitButton = document.getElementById('submit-button');
+    const inputs = form.querySelectorAll('input, textarea, select');
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting
-
-    // Send email using EmailJS
-    emailjs.sendForm('service_irqa36r', 'test_axelna', this)
-        .then(function(response) {
-            console.log('Email sent successfully', response.status, response.text);
-            alert('Your message has been sent successfully!');
-            // Optionally clear the form
-            document.getElementById('contact-form').reset();
-        }, function(error) {
-            console.log('Email sending failed', error);
-            alert('Oops... Something went wrong. Please try again later.');
+    function checkFormCompletion() {
+        let allFilled = true;
+        inputs.forEach(input => {
+            const trimmedValue = input.value.trim(); // Trim whitespace from value
+            console.log(`${input.name}: ${trimmedValue}`); // Log each input's value
+            if (!trimmedValue) {
+                allFilled = false;
+            }
         });
+        console.log(`All filled: ${allFilled}`); // Log whether all inputs are filled
+        if (allFilled) {
+            submitButton.disabled = false;
+            submitButton.classList.remove('disabled');
+        } else {
+            submitButton.disabled = true;
+            submitButton.classList.add('disabled');
+        }
+    }
+
+    inputs.forEach(input => {
+        input.addEventListener('input', checkFormCompletion);
+    });
+
+    // Initial check to see if all fields are filled on page load
+    checkFormCompletion();
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const serviceID = 'service_irqa36r'; // Your Service ID
+        const templateID = 'template_nzzuyw9'; // Your Template ID
+        
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(function(response) {
+                alert('Your message has been sent successfully!');
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                alert('Failed to send the message. Please try again later.');
+                console.error('FAILED...', error);
+            });
+    });
 });
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
