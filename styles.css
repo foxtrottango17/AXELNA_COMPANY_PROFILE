@@ -226,6 +226,19 @@ nav ul li a:hover {
     width: 30%; text-align: center;
 }
 
+.results-header{
+    display: flex;
+    justify-content: center;
+    color: black;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 2px 4px rgb(31 11 11 / 90%);
+}
+
 
 .text-section {
     margin-bottom: 2rem;
@@ -256,6 +269,7 @@ ul#production_list li {
 
 ul#production_list li:hover {
     background-color: #f9f9f9;
+    border-radius:0.5rem;
 }
 
 ul#production_list li.active {
@@ -279,6 +293,7 @@ ul#demand_list li {
 
 ul#demand_list li:hover {
     background-color: #f9f9f9;
+    border-radius:0.5rem;
 }
 
 ul#demand_list li.active {
@@ -301,6 +316,7 @@ ul#distribution_list li {
 
 ul#distribution_list li:hover {
     background-color: #f9f9f9; /* Hover background color */
+    border-radius:0.5rem;
 }
 
 ul#distribution_list li.active {
