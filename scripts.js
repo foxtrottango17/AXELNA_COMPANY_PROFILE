@@ -258,34 +258,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
-    const submitButton = document.getElementById('submit-button');
-    const inputs = form.querySelectorAll('input, textarea, select');
-
-    function checkFormCompletion() {
-        let allFilled = true;
-        inputs.forEach(input => {
-            const trimmedValue = input.value.trim(); // Trim whitespace from value
-            console.log(`${input.name}: ${trimmedValue}`); // Log each input's value
-            if (!trimmedValue) {
-                allFilled = false;
-            }
-        });
-        console.log(`All filled: ${allFilled}`); // Log whether all inputs are filled
-        if (allFilled) {
-            submitButton.disabled = false;
-            submitButton.classList.remove('disabled');
-        } else {
-            submitButton.disabled = true;
-            submitButton.classList.add('disabled');
-        }
-    }
-
-    inputs.forEach(input => {
-        input.addEventListener('input', checkFormCompletion);
-    });
-
-    // Initial check to see if all fields are filled on page load
-    checkFormCompletion();
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -303,10 +275,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     });
 });
-
-
-
-
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -347,6 +315,35 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    const submitButton = document.getElementById('submit-button');
+    const requiredFields = form.querySelectorAll('[required]');
 
+    // Function to check if all required fields are filled
+    function checkFormValidity() {
+        let allValid = true;
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                allValid = false;
+            }
+        });
 
+        if (allValid) {
+            submitButton.removeAttribute('disabled');
+            submitButton.classList.remove('disabled');
+        } else {
+            submitButton.setAttribute('disabled', 'disabled');
+            submitButton.classList.add('disabled');
+        }
+    }
+
+    // Add event listeners to required fields
+    requiredFields.forEach(field => {
+        field.addEventListener('input', checkFormValidity);
+    });
+
+    // Initial check
+    checkFormValidity();
+});
 
